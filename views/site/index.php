@@ -5,4 +5,4 @@
 $this->title = 'My Yii Application';
 ?>
 
-<p><a href="?r=post">Гостевая книга</a></p>
+<p><a href="?r=product">Продукты</a></p>
