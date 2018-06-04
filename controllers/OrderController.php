@@ -35,18 +35,6 @@ class OrderController extends Controller
 	}
 
 
-	public function actionIndexBkp()
-	{
-		$query = Order::find()->with('products');
-
-		$pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3]);
-		$orders = $query->offset($pages->offset)
-		->limit($pages->limit)
-		->all();
-
-		return $this->render('index', ['orders' => $orders, 'pages' => $pages]);
-	}
-
 	public function actionAdd($product_id)
 	{
 		$model = new Order();
